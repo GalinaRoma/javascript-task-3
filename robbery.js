@@ -184,7 +184,7 @@ function addSegmentsInWorkHours(schedule, startHour, endHour) {
             return result;
         } else if (currentSegment.from < startHour && currentSegment.to > startHour) {
             newElement = { from: startHour, to: currentSegment.to };
-        } else if ((currentSegment.from < endHour && currentSegment.to > endHour)) {
+        } else if (currentSegment.from < endHour && currentSegment.to > endHour) {
             newElement = { from: currentSegment.from, to: endHour };
         } else {
             newElement = currentSegment;
